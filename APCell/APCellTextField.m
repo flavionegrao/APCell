@@ -16,6 +16,8 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 
 
 @interface APCellTextField () <UITextFieldDelegate>
+@property (nonatomic,copy) void (^cellDidEdit) (NSString* text);
+@property (nonatomic,copy) void (^didBecomeFirstResponder)(void);
 
 @property (nonatomic,strong) UITextField* textField;
 @property (nonatomic,strong) NSArray* textFielHorizontalContraints;
@@ -116,6 +118,7 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     if (prefixText) {
         
         UILabel* prefixTextLabel = [UILabel new];
+        prefixTextLabel.numberOfLines = 0;
         prefixTextLabel.textColor = self.prefixTextColor ?: [UIColor blackColor];
         prefixTextLabel.text = prefixText;
         [prefixTextLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -292,6 +295,14 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     }
     return YES;
 }
+
+
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
+    if (self.didBecomeFirstResponder) self.didBecomeFirstResponder();
+    return YES;
+}
+
+
 //
 //- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
 //    if (self.isEditing) {

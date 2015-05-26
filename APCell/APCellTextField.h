@@ -41,8 +41,10 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
 /// Space from left margin to textfield. Default is 8
 @property (nonatomic, assign) NSInteger textInsetFromLeftMargin;
 
-/// Retorna o que o usuário editou usuário esta editando
-@property (nonatomic,copy) void (^cellDidEdit) (NSString* text);
+/// Retorna o que o usuário editou usuário esta editando;
+- (void) setCellDidEdit:(void (^)(NSString *text))block;
+
+- (void) setDidBecomeFirstResponder:(void(^)(void)) block;
 
 /// Bloco será executado quando o usuário apertear return no teclado, caso == nil some com o teclado
 @property (nonatomic,copy) void (^cellDidClickReturn) (void);
