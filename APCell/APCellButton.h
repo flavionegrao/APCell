@@ -11,7 +11,13 @@
 @interface APCellButton : UITableViewCell
 
 @property (nonatomic, copy) NSString* buttonTitle;
+
+/// Default is tintColor
 @property (nonatomic, copy) UIColor* buttonTitleTextColor;
+
+/// Default is 14
+@property (nonatomic, assign) NSInteger buttonFontSize;
+
 @property (nonatomic, assign, getter=isButtonEnabled) BOOL buttonEnabled;
 
 - (void) setButtonDidTouchBlock:(void(^) (void)) block;

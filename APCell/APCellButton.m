@@ -22,19 +22,17 @@
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _buttonTitle = @"No Title Set";
-        _buttonTitleTextColor = self.tintColor;
         [self configCell];
     }
     return self;
 }
 
 - (void)awakeFromNib {
-    
      [super awakeFromNib];
     // Initialization code
     [self configCell];
 }
+
 
 - (void) setButtonTitle:(NSString *)buttonTitle {
      [self.button setTitle:buttonTitle forState:UIControlStateNormal];
@@ -54,23 +52,33 @@
 
 - (void) configCell {
     
-    self.button = [[UIButton alloc]initWithFrame:CGRectZero];
-    self.button.titleLabel.textAlignment = NSTextAlignmentLeft;
-    [self.button setTitle:self.buttonTitle forState:UIControlStateNormal];
-    [self.button setTitleColor:self.buttonTitleTextColor forState:UIControlStateNormal];
-    [self.button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    _buttonTitle = @"No Title Set";
+    _buttonTitleTextColor = self.tintColor;
+    _buttonFontSize = 14;
     
-    [self.button setTranslatesAutoresizingMaskIntoConstraints: NO];
-    [self.contentView addSubview:self.button];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[button]|" options:0 metrics:nil views:@{@"button":self.button}]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[button]|" options:0 metrics:nil views:@{@"button":self.button}]];
+    _button = [[UIButton alloc]initWithFrame:CGRectZero];
+    _button.titleLabel.textAlignment = NSTextAlignmentLeft;
+    [_button setTitle:_buttonTitle forState:UIControlStateNormal];
+    _button.titleLabel.font = [UIFont systemFontOfSize:_buttonFontSize];
+    [_button setTitleColor:_buttonTitleTextColor forState:UIControlStateNormal];
+    [_button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
     
-    [self.button addTarget:self action:@selector(buttonDidTouch:) forControlEvents:UIControlEventTouchUpInside];
+    [_button setTranslatesAutoresizingMaskIntoConstraints: NO];
+    [self.contentView addSubview:_button];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[button]|" options:0 metrics:nil views:@{@"button":_button}]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[button]|" options:0 metrics:nil views:@{@"button":_button}]];
+    
+    [_button addTarget:self action:@selector(buttonDidTouch:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
 - (void) buttonDidTouch: (UIButton*) sender {
     if (self.buttonDidTouchBlock) self.buttonDidTouchBlock();
+}
+
+- (void) setButtonFontSize:(NSInteger)buttonFontSize {
+    _buttonFontSize = buttonFontSize;
+    self.button.titleLabel.font = [UIFont systemFontOfSize:buttonFontSize];
 }
 
 
