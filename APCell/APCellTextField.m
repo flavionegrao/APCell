@@ -227,6 +227,18 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     self.textField.textAlignment = textAlignment;
 }
 
+- (void) setClearButtonMode:(UITextFieldViewMode)clearButtonMode {
+    self.textField.clearButtonMode = clearButtonMode;
+}
+
+- (UITextFieldViewMode) clearButtonMode {
+    return self.textField.clearButtonMode;
+}
+
+- (void) setInputAccessoryView:(UIView *)inputAccessoryView {
+    self.textField.inputAccessoryView = inputAccessoryView;
+}
+
 
 - (BOOL) becomeFirstResponder {
     [super becomeFirstResponder];

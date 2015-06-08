@@ -57,6 +57,11 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
 /// Default UITextAutocapitalizationTypeNone
 @property (nonatomic,assign) UITextAutocapitalizationType autocapitalizationType;
 
+///
+@property (nonatomic, assign) UITextFieldViewMode clearButtonMode;
+
+@property (nonatomic, weak) UIView* inputAccessoryView;
+
 @property (nonatomic,assign) BOOL secure;
 
 
