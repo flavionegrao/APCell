@@ -15,7 +15,7 @@
 static NSInteger const kAPTextFieldHorizontalInset = 20;
 
 
-@interface APCellTextField () <UITextFieldDelegate>
+@interface APCellTextField () <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,copy) void (^cellDidEdit) (NSString* text);
 @property (nonatomic,copy) void (^didBecomeFirstResponder)(void);
 
@@ -189,20 +189,106 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 - (void) setTextfieldInputType:(APStringInputType)textfieldInputType {
     _textfieldInputType = textfieldInputType;
     
-    if (textfieldInputType == APStringInputTypeMoney || textfieldInputType == APStringInputTypeNumberDecimal){
-        [self.textField setKeyboardType:UIKeyboardTypeDecimalPad];
-        self.maxDecimalPlaces = 2;
+    switch (textfieldInputType) {
         
-    } else if (textfieldInputType == APStringInputTypeFreeText) {
-        [self.textField setKeyboardType:UIKeyboardTypeASCIICapable];
+        case APStringInputTypeMoney:
+        case APStringInputTypeNumberDecimal:
+            self.textField.keyboardType = UIKeyboardTypeDecimalPad;
+            self.maxDecimalPlaces = 2;
+            break;
         
-    } else if (textfieldInputType == APStringInputTypeNumber) {
-        if (self.maxDecimalPlaces > 0) {
-            [self.textField setKeyboardType:UIKeyboardTypeDecimalPad];
-        } else {
-            [self.textField setKeyboardType:UIKeyboardTypeNumberPad];
-        }
+        case APStringInputTypeFreeText:
+            self.textField.keyboardType = UIKeyboardTypeASCIICapable;
+             break;
+        
+        case APStringInputTypeNumber:
+            if (self.maxDecimalPlaces > 0) {
+                self.textField.keyboardType = UIKeyboardTypeDecimalPad;
+                
+            } else {
+                self.textField.keyboardType = UIKeyboardTypeNumberPad;
+            }
+             break;
+            
+        case APStringInputTypeMonth:
+        case APStringInputTypeYear:
+            self.textField.inputView = [self pickerView];
+            
+        default:
+            break;
     }
+}
+
+- (void) setCellDidClickReturn:(void (^)(void))cellDidClickReturn {
+    _cellDidClickReturn = cellDidClickReturn;
+    switch (self.textfieldInputType) {
+            
+        case APStringInputTypeMoney:
+        case APStringInputTypeNumberDecimal:
+        case APStringInputTypeNumber:
+        case APStringInputTypeMonth:
+        case APStringInputTypeYear:
+            if (self.cellDidClickReturn) {
+                self.textField.inputAccessoryView = [self pickerAccessoryView];
+            }
+            break;
+        default:
+            self.textField.inputAccessoryView = nil;
+    }
+
+    
+}
+
+- (UIToolbar*) pickerAccessoryView {
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleDefault;
+    numberToolbar.items = @[[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           
+                           [[UIBarButtonItem alloc]initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)]];
+    [numberToolbar sizeToFit];
+    return numberToolbar;
+}
+
+- (void) doneWithNumberPad {
+    if (self.cellDidClickReturn) self.cellDidClickReturn();
+}
+
+
+- (UIPickerView*) pickerView {
+    UIPickerView *pickerView = [[UIPickerView alloc] init];
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    return pickerView;
+}
+
+
+#pragma mark - PickerView DataSource and Delegate
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    if (self.textfieldInputType == APStringInputTypeMonth) {
+        return 12;
+    } else {
+        return 20;
+    }
+}
+
+- (NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    if (self.textfieldInputType == APStringInputTypeMonth) {
+        return [NSString stringWithFormat:@"%ld",row + 1];
+    } else {
+        return [NSString stringWithFormat:@"%ld",row + 2015];
+    }
+}
+
+
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSString* selectedTitle = [self pickerView:pickerView titleForRow:row forComponent:component];
+    self.textField.text = selectedTitle;
+    if (self.cellDidEdit) self.cellDidEdit(selectedTitle);
 }
 
 - (void) setMaxDecimalPlaces:(NSUInteger)maxDecimalPlaces {

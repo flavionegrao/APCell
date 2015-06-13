@@ -12,7 +12,9 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
     APStringInputTypeFreeText = 0,
     APStringInputTypeNumber,
     APStringInputTypeNumberDecimal,
-    APStringInputTypeMoney
+    APStringInputTypeMoney,
+    APStringInputTypeMonth,
+    APStringInputTypeYear,
 };
 
 
@@ -60,7 +62,7 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
 ///
 @property (nonatomic, assign) UITextFieldViewMode clearButtonMode;
 
-@property (nonatomic, weak) UIView* inputAccessoryView;
+///@property (nonatomic, weak) UIView* inputAccessoryView;
 
 @property (nonatomic,assign) BOOL secure;
 
