@@ -278,9 +278,9 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 
 - (NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if (self.textfieldInputType == APStringInputTypeMonth) {
-        return [NSString stringWithFormat:@"%ld",row + 1];
+        return [NSString stringWithFormat:@"%ld",(long) row + 1];
     } else {
-        return [NSString stringWithFormat:@"%ld",row + 2015];
+        return [NSString stringWithFormat:@"%ld",(long) row + 2015];
     }
 }
 
