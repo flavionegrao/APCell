@@ -18,6 +18,9 @@
 /// Default is 14
 @property (nonatomic, assign) NSInteger buttonFontSize;
 
+/// Default is Left
+@property (nonatomic, assign) NSTextAlignment buttonTitleTextAlignment;
+
 @property (nonatomic, assign, getter=isButtonEnabled) BOOL buttonEnabled;
 
 - (void) setButtonDidTouchBlock:(void(^) (void)) block;

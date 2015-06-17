@@ -7,6 +7,7 @@
 //
 
 #import "APCellButton.h"
+#import "UIColor+APUtil.h"
 
 @interface APCellButton ()
 
@@ -40,13 +41,18 @@
 }
 
 - (void) setButtonTitleTextColor:(UIColor *)buttonTitleTextColor {
-    [self.button setTitleColor:buttonTitleTextColor forState:UIControlStateNormal];
     _buttonTitleTextColor = buttonTitleTextColor;
+    [self.button setTitleColor:buttonTitleTextColor forState:UIControlStateNormal];
+    [self.button setTitleColor:[buttonTitleTextColor blendWithColor:[UIColor whiteColor] alpha:0.75] forState:UIControlStateHighlighted];
+}
+
+- (void) setButtonTitleTextAlignment:(NSTextAlignment)buttonTitleTextAlignment {
+    _buttonTitleTextAlignment = buttonTitleTextAlignment;
+    self.button.titleLabel.textAlignment = buttonTitleTextAlignment;
 }
 
 - (void) setButtonEnabled:(BOOL)buttonEnabled {
     self.button.enabled = buttonEnabled;
-    
 }
 
 
@@ -55,17 +61,22 @@
     _buttonTitle = @"No Title Set";
     _buttonTitleTextColor = self.tintColor;
     _buttonFontSize = 14;
+    _buttonTitleTextAlignment = NSTextAlignmentLeft;
+    
     
     _button = [[UIButton alloc]initWithFrame:CGRectZero];
     _button.titleLabel.textAlignment = NSTextAlignmentLeft;
     [_button setTitle:_buttonTitle forState:UIControlStateNormal];
     _button.titleLabel.font = [UIFont systemFontOfSize:_buttonFontSize];
+    _button.titleLabel.textAlignment = _buttonTitleTextAlignment;
+    
     [_button setTitleColor:_buttonTitleTextColor forState:UIControlStateNormal];
     [_button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [_button setTitleColor:[_buttonTitleTextColor blendWithColor:[UIColor whiteColor] alpha:0.75] forState:UIControlStateHighlighted];
     
     [_button setTranslatesAutoresizingMaskIntoConstraints: NO];
     [self.contentView addSubview:_button];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[button]|" options:0 metrics:nil views:@{@"button":_button}]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(18)-[button]" options:0 metrics:nil views:@{@"button":_button}]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[button]|" options:0 metrics:nil views:@{@"button":_button}]];
     
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:44]];
