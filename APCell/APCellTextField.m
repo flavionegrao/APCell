@@ -326,17 +326,17 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 }
 
 
-- (BOOL) becomeFirstResponder {
-    [super becomeFirstResponder];
-    [self.textField becomeFirstResponder];
-    return YES;
-}
-
-- (BOOL) resignFirstResponder {
-    [super resignFirstResponder];
-    [self.textField resignFirstResponder];
-    return YES;
-}
+//- (BOOL) becomeFirstResponder {
+//    [super becomeFirstResponder];
+//    [self.textField becomeFirstResponder];
+//    return YES;
+//}
+//
+//- (BOOL) resignFirstResponder {
+//    [super resignFirstResponder];
+//    [self.textField resignFirstResponder];
+//    return YES;
+//}
 
 #pragma UITextFieldDelegate
 
