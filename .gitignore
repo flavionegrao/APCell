@@ -20,6 +20,5 @@ DerivedData/
 *.xcuserstate
 *.xcbkptlist
 
-Podfile
 Pods/
 Podfile.lock
