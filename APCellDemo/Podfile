@@ -1,0 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod 'APUtil', :git => 'https://github.com/flavionegrao/APUtil.git'
+pod 'APCell', :git => 'https://github.com/flavionegrao/APCell.git'

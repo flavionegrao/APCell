@@ -1,0 +1,19 @@
+{
+  "name": "APCell",
+  "version": "0.1",
+  "summary": "Subclasses of UITableViewCells",
+  "homepage": "https://github.com/flavionegrao/APCell",
+  "license": "MIT",
+  "authors": {
+    "Flavio Negrao Torres": "flavio@apetis.com"
+  },
+  "source": {
+    "git": "https://github.com/flavionegrao/APCell.git",
+    "tag": "0.1"
+  },
+  "source_files": "APCell/**",
+  "platforms": {
+    "ios": "7.1"
+  },
+  "requires_arc": true
+}

@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0160F3D6A47D019409E1EB88 /* NSManagedObjectContext+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB847E5DFAA691573FFAD8 /* NSManagedObjectContext+APUtil.m */; };
+		089ABBC60C1AB0AAB09F917C /* NSError+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D98F564BCE8B8B9A935DF /* NSError+APUtil.m */; };
+		0A5C001FC76C37D939274C9C /* NSError+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA73A3A1DF99BC0BA0436F /* NSError+APUtil.h */; };
+		0A656CC61FD38F4BAD3B0F0F /* Pods-APUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 737E3451025E499EA592FAF6 /* Pods-APUtil-dummy.m */; };
+		0ABF840C21D745EA89C1080D /* APCellVolumePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2081EEC60183B66A1B843BC0 /* APCellVolumePicker.h */; };
+		0ECBF251DECEAF82D4BDF4D4 /* NSArray+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE93AE94B1104D65CA067EA /* NSArray+APUtil.h */; };
+		0FA7D61A1BDF3949076503DB /* NSLayoutConstraint+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 364EA6C6758FC2586F879F71 /* NSLayoutConstraint+APUtil.m */; };
+		0FC5157E1751F13A253AD2FA /* UIColor+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 733E6431C97CA0C51BECE7B1 /* UIColor+APUtil.m */; };
+		15F1A4E294E30AB80A126455 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A1DFB080AB7BB1E354CF88 /* Foundation.framework */; };
+		20F8D3B033055524F1FD0E69 /* Pods-APCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB58E9C111A735861D3C77F /* Pods-APCell-dummy.m */; };
+		2E4D25A199677F2000767AF2 /* APCellDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DC96AC7204B40D4621858F70 /* APCellDatePicker.h */; };
+		2E9A19018BB9063DAD56653F /* UIImage+resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4C41FF726795FC697CC12F /* UIImage+resize.h */; };
+		2ED1938EA5580C07C73EE315 /* APCellSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 913D6317B6764CE28A86DBA0 /* APCellSwitch.m */; };
+		33F764E5E25FC3D8FDDE455B /* NSAttributedString+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 347B31086A4344761D03B32E /* NSAttributedString+APUtil.m */; };
+		3AC5E69AF5060A5094D1DB98 /* APCellVolumePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E3F86255116BE6D3C6A0A0 /* APCellVolumePicker.m */; };
+		3B4621CC95031806171DEFB3 /* NSMassFormatter+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC17035E97EBFA24DA5CEE /* NSMassFormatter+APUtil.m */; };
+		44637E46B81D5B0E30E049C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A1DFB080AB7BB1E354CF88 /* Foundation.framework */; };
+		4592506974A419BA7911F85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A1DFB080AB7BB1E354CF88 /* Foundation.framework */; };
+		4B4A1A318CA34154A389BF29 /* APCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484D522FF75488F47E271BD /* APCellDatePicker.m */; };
+		50E09C2E0D65FF3569C4BBCD /* NSString+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4713BC629CF50A754195E6DA /* NSString+APUtil.m */; };
+		53D84F1A760CF373DAFE8EF7 /* APCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C93818D8BC97A0BCC653E /* APCellTextField.m */; };
+		5554461EAA86E15910BB350A /* UITableView+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B38638C3A17236E6F382258A /* UITableView+APUtil.h */; };
+		55AD92DC171BB1B080168315 /* UIViewController+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 338AF4D6124ECFBF9262C919 /* UIViewController+APUtil.h */; };
+		5AD551521A8BE0C2D426B87C /* DynamicSubtitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D8FF2932B75D2D3CB53D /* DynamicSubtitleCell.m */; };
+		5B77ABEDCA9EFF0C2AD67503 /* APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 75772C1DDF8FE1AC4E4F559E /* APUtil.h */; };
+		5CE7B75EF6207219962224FB /* NSNumber+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C9305649FC9244756EE2E257 /* NSNumber+APUtil.h */; };
+		5FE710151A8095EEC25CC97D /* NSManagedObjectContext+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B49E320222084B05A91699 /* NSManagedObjectContext+APUtil.h */; };
+		6303A28AA2660C6FDDEF24DB /* NSJSONSerialization+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 71C91E8D68DDD5C87F82FDAD /* NSJSONSerialization+APUtil.h */; };
+		630C77F781699155DDCE9140 /* UIView+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1347CAAFE38FA4C36C3C9164 /* UIView+APUtil.m */; };
+		6EBFFE019D7D07D3BC5721CF /* NSJSONSerialization+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A849D62F559218D13843C555 /* NSJSONSerialization+APUtil.m */; };
+		6FC0BD5562FE1802418AE95C /* UIImage+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A5188CF0B83D4EC8173377B /* UIImage+APUtil.h */; };
+		7A0F88C22304E4A6B60DE46F /* DynamicSubtitleCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A5B6A9EFE5E8C89C8F149A /* DynamicSubtitleCell.h */; };
+		7BD683D073ECDCFB132C4C68 /* NSData+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2120B5908FF72304A6037DB /* NSData+APUtil.m */; };
+		7F4FC0B5F880164B535741ED /* UIImage+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC940858FB719BFC69EC506 /* UIImage+APUtil.m */; };
+		8247E92253067F9B1060DD0C /* NSData+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 78193D73A1E2A5BB5346DE75 /* NSData+APUtil.h */; };
+		9741EA701F2EE115B3AEAD7B /* NSLayoutConstraint+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E755767C7E31C6600FC67023 /* NSLayoutConstraint+APUtil.h */; };
+		9CF4BB6ADF2463923B57E107 /* UIColor+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9873EA9DE52E998C87CCAFB9 /* UIColor+APUtil.h */; };
+		9E58A6E38F6E7F351E607743 /* APCellSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F9619391634EBF281D872C /* APCellSwitch.h */; };
+		9FEF0047DC18405251DA5666 /* NSPersistentStoreCoordinator+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3353467060FC2273C0A84D0C /* NSPersistentStoreCoordinator+APUtil.h */; };
+		A371032F76D63D3ADF41D443 /* UIAlertController+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4289247AC437E8EBF658B5 /* UIAlertController+APUtil.m */; };
+		A71777297C8A5CD8F9737A1A /* UIAlertController+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABD5D10D100D1F1CB182CBE /* UIAlertController+APUtil.h */; };
+		ABB23E75AC248FE140D9E00E /* NSFetchRequest+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 535DA6A3436ADAB9D853CF5F /* NSFetchRequest+APUtil.h */; };
+		B359C13227592F34CEF946D2 /* NSManagedObject+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA15BB724E9DD6A85D3AC07 /* NSManagedObject+APUtil.m */; };
+		B429D1A12ECA8A460EA250F1 /* UIView+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 43401153B5B357D1B4AF92DC /* UIView+APUtil.h */; };
+		B584C06422989FB6BECCB2F8 /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E59B3FEBB8EE16EE6043CA /* UIImage+resize.m */; };
+		B672E46D211883BC6464E86F /* NSManagedObject+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 739D3E6D8B0C7B9E3AED477E /* NSManagedObject+APUtil.h */; };
+		BD3B762B90C3D1A5B579BD23 /* NSMassFormatter+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C0EDD15877FC24C65CD7EB53 /* NSMassFormatter+APUtil.h */; };
+		BE4AEE5AF478E1ECE61CA6FA /* NSNumber+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A50F283436A7BD636CFEC8 /* NSNumber+APUtil.m */; };
+		BE5AF957848EC16F3057B999 /* NSSet+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E55C1006F00BCD2C075F6C7E /* NSSet+APUtil.h */; };
+		C647A0CDEE9147C776D3CECC /* APCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D20EFAA5660FE7D8599EA8EE /* APCellButton.m */; };
+		C71BF893020A7DFFE5286C56 /* NSDate+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C4B4CE1DD74ABE7605572894 /* NSDate+APUtil.h */; };
+		CD4D8AB415EEE57C399F56C4 /* NSArray+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E11446315D1D03E29E5F31EF /* NSArray+APUtil.m */; };
+		CF275E7B61856AE9949F52F6 /* UIViewController+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D7B908118FCA5D719410 /* UIViewController+APUtil.m */; };
+		D3188E23059BEDB575AC0FAB /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F16A204D49E0979D545103 /* Pods-dummy.m */; };
+		D45FF861076D535F2D18408F /* UITableView+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D28741E5D4D26CA12CA52B /* UITableView+APUtil.m */; };
+		D4766D0951CF41B32866E3E2 /* APCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 286A0B67B1BF86CED8534A27 /* APCellButton.h */; };
+		DB04C72D5C8FD8B37977DE2C /* UIImageView+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CA8EDEAC2AC78BDA64304E /* UIImageView+APUtil.m */; };
+		DEC197C1F31AAE73563EABA1 /* NSAttributedString+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C6AD3D2A49E4221572066FA8 /* NSAttributedString+APUtil.h */; };
+		E4529E8E5C2D3CAB99B665AF /* NSFetchRequest+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE868EF7EE49E8DBE6E0D1 /* NSFetchRequest+APUtil.m */; };
+		E876F1E29B6B561760B046AE /* NSPersistentStoreCoordinator+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D92BB8D1DD3EC798BA1F671 /* NSPersistentStoreCoordinator+APUtil.m */; };
+		EE7949F1D0107C4870E2FE92 /* APCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8EC090586C51596F70F1C6 /* APCellTextField.h */; };
+		F024CDDE1E2A6D37EEF7B679 /* NSString+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A8716A12AE7F8052B121B8D /* NSString+APUtil.h */; };
+		F211E9FA8EABF6328E6464F4 /* NSSet+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D173AD4EB0DEE530FAC26EDB /* NSSet+APUtil.m */; };
+		F68586F7642969C0F10D5D72 /* UIImageView+APUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F0B4767AB889B9998E8634 /* UIImageView+APUtil.h */; };
+		F84CCF96F425ABA9C1FB000F /* NSDate+APUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834F7EC96580683DC262F30 /* NSDate+APUtil.m */; };
+		FCC89434A0798E6B45DC1293 /* APCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E54AA2855675DA17D5F9C69 /* APCell.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CDA959285B8C7D0F71AB035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A750E36788C0214A8B46CAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 679C53C771B4D4917A343FC8;
+			remoteInfo = "Pods-APCell";
+		};
+		83C99AD83632CF375DBA6BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A750E36788C0214A8B46CAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53BC91B72FA4D88FEA705931;
+			remoteInfo = "Pods-APUtil";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E54AA2855675DA17D5F9C69 /* APCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCell.h; sourceTree = "<group>"; };
+		0EBE868EF7EE49E8DBE6E0D1 /* NSFetchRequest+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+APUtil.m"; sourceTree = "<group>"; };
+		1347CAAFE38FA4C36C3C9164 /* UIView+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+APUtil.m"; sourceTree = "<group>"; };
+		15B49E320222084B05A91699 /* NSManagedObjectContext+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+APUtil.h"; sourceTree = "<group>"; };
+		19383ED9696AFEA005E2F949 /* Pods-APCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APCell.xcconfig"; sourceTree = "<group>"; };
+		1ABD5D10D100D1F1CB182CBE /* UIAlertController+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+APUtil.h"; sourceTree = "<group>"; };
+		1BCC17035E97EBFA24DA5CEE /* NSMassFormatter+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMassFormatter+APUtil.m"; sourceTree = "<group>"; };
+		1C4C93818D8BC97A0BCC653E /* APCellTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APCellTextField.m; sourceTree = "<group>"; };
+		1D92BB8D1DD3EC798BA1F671 /* NSPersistentStoreCoordinator+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+APUtil.m"; sourceTree = "<group>"; };
+		2081EEC60183B66A1B843BC0 /* APCellVolumePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCellVolumePicker.h; sourceTree = "<group>"; };
+		226D98F564BCE8B8B9A935DF /* NSError+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSError+APUtil.m"; sourceTree = "<group>"; };
+		286A0B67B1BF86CED8534A27 /* APCellButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCellButton.h; sourceTree = "<group>"; };
+		2A8716A12AE7F8052B121B8D /* NSString+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+APUtil.h"; sourceTree = "<group>"; };
+		2D09352736115F0D8277B154 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2EE2455E68E78E9ECC92BAC3 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		3353467060FC2273C0A84D0C /* NSPersistentStoreCoordinator+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+APUtil.h"; sourceTree = "<group>"; };
+		338AF4D6124ECFBF9262C919 /* UIViewController+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+APUtil.h"; sourceTree = "<group>"; };
+		347B31086A4344761D03B32E /* NSAttributedString+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+APUtil.m"; sourceTree = "<group>"; };
+		35F9619391634EBF281D872C /* APCellSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCellSwitch.h; sourceTree = "<group>"; };
+		364EA6C6758FC2586F879F71 /* NSLayoutConstraint+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+APUtil.m"; sourceTree = "<group>"; };
+		37A1DFB080AB7BB1E354CF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3834F7EC96580683DC262F30 /* NSDate+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+APUtil.m"; sourceTree = "<group>"; };
+		3B4C41FF726795FC697CC12F /* UIImage+resize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+resize.h"; sourceTree = "<group>"; };
+		43401153B5B357D1B4AF92DC /* UIView+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+APUtil.h"; sourceTree = "<group>"; };
+		45F16A204D49E0979D545103 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		4713BC629CF50A754195E6DA /* NSString+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+APUtil.m"; sourceTree = "<group>"; };
+		48A50F283436A7BD636CFEC8 /* NSNumber+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+APUtil.m"; sourceTree = "<group>"; };
+		524965328B681018EE3D747B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		535DA6A3436ADAB9D853CF5F /* NSFetchRequest+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+APUtil.h"; sourceTree = "<group>"; };
+		5484D522FF75488F47E271BD /* APCellDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APCellDatePicker.m; sourceTree = "<group>"; };
+		57FF1FE4C2DCDD23B69838A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		58C8670C16ECBB6B08B123F8 /* Pods-APUtil.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APUtil.xcconfig"; sourceTree = "<group>"; };
+		5ACB847E5DFAA691573FFAD8 /* NSManagedObjectContext+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+APUtil.m"; sourceTree = "<group>"; };
+		5DE049A80DB686F9B9E2D0C5 /* Pods-APCell-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APCell-Private.xcconfig"; sourceTree = "<group>"; };
+		6A5188CF0B83D4EC8173377B /* UIImage+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+APUtil.h"; sourceTree = "<group>"; };
+		6C28D8FF2932B75D2D3CB53D /* DynamicSubtitleCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DynamicSubtitleCell.m; sourceTree = "<group>"; };
+		6E06039BB4E253344AFBF99D /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		71C91E8D68DDD5C87F82FDAD /* NSJSONSerialization+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+APUtil.h"; sourceTree = "<group>"; };
+		733E6431C97CA0C51BECE7B1 /* UIColor+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+APUtil.m"; sourceTree = "<group>"; };
+		737E3451025E499EA592FAF6 /* Pods-APUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APUtil-dummy.m"; sourceTree = "<group>"; };
+		739D3E6D8B0C7B9E3AED477E /* NSManagedObject+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+APUtil.h"; sourceTree = "<group>"; };
+		74A5B6A9EFE5E8C89C8F149A /* DynamicSubtitleCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DynamicSubtitleCell.h; sourceTree = "<group>"; };
+		75772C1DDF8FE1AC4E4F559E /* APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APUtil.h; sourceTree = "<group>"; };
+		78193D73A1E2A5BB5346DE75 /* NSData+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+APUtil.h"; sourceTree = "<group>"; };
+		83CA8EDEAC2AC78BDA64304E /* UIImageView+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+APUtil.m"; sourceTree = "<group>"; };
+		89E3F86255116BE6D3C6A0A0 /* APCellVolumePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APCellVolumePicker.m; sourceTree = "<group>"; };
+		8E8B44C8B8D2EF97E8FF61BD /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		913D6317B6764CE28A86DBA0 /* APCellSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APCellSwitch.m; sourceTree = "<group>"; };
+		96F0B4767AB889B9998E8634 /* UIImageView+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+APUtil.h"; sourceTree = "<group>"; };
+		981C279064707D2C70FCB4E3 /* Pods-APUtil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APUtil-prefix.pch"; sourceTree = "<group>"; };
+		9873EA9DE52E998C87CCAFB9 /* UIColor+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+APUtil.h"; sourceTree = "<group>"; };
+		9B4289247AC437E8EBF658B5 /* UIAlertController+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+APUtil.m"; sourceTree = "<group>"; };
+		9D73D7B908118FCA5D719410 /* UIViewController+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+APUtil.m"; sourceTree = "<group>"; };
+		A2120B5908FF72304A6037DB /* NSData+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+APUtil.m"; sourceTree = "<group>"; };
+		A4CA73A3A1DF99BC0BA0436F /* NSError+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSError+APUtil.h"; sourceTree = "<group>"; };
+		A7D28741E5D4D26CA12CA52B /* UITableView+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+APUtil.m"; sourceTree = "<group>"; };
+		A849D62F559218D13843C555 /* NSJSONSerialization+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+APUtil.m"; sourceTree = "<group>"; };
+		AAA15BB724E9DD6A85D3AC07 /* NSManagedObject+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+APUtil.m"; sourceTree = "<group>"; };
+		ABB58E9C111A735861D3C77F /* Pods-APCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APCell-dummy.m"; sourceTree = "<group>"; };
+		ADE93AE94B1104D65CA067EA /* NSArray+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+APUtil.h"; sourceTree = "<group>"; };
+		B38638C3A17236E6F382258A /* UITableView+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+APUtil.h"; sourceTree = "<group>"; };
+		B43CB4D5C439A96B27F35744 /* libPods-APUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APUtil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA321B944DE6FDDBC82DDCAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EDD15877FC24C65CD7EB53 /* NSMassFormatter+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMassFormatter+APUtil.h"; sourceTree = "<group>"; };
+		C4B4CE1DD74ABE7605572894 /* NSDate+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+APUtil.h"; sourceTree = "<group>"; };
+		C4E59B3FEBB8EE16EE6043CA /* UIImage+resize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
+		C6AD3D2A49E4221572066FA8 /* NSAttributedString+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+APUtil.h"; sourceTree = "<group>"; };
+		C9305649FC9244756EE2E257 /* NSNumber+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+APUtil.h"; sourceTree = "<group>"; };
+		CC075B98DABAF8C6689AFF02 /* libPods-APCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC940858FB719BFC69EC506 /* UIImage+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+APUtil.m"; sourceTree = "<group>"; };
+		CD8EC090586C51596F70F1C6 /* APCellTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCellTextField.h; sourceTree = "<group>"; };
+		CFE52BC2462E9BB49E5FB026 /* Pods-APUtil-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APUtil-Private.xcconfig"; sourceTree = "<group>"; };
+		D173AD4EB0DEE530FAC26EDB /* NSSet+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSSet+APUtil.m"; sourceTree = "<group>"; };
+		D20EFAA5660FE7D8599EA8EE /* APCellButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APCellButton.m; sourceTree = "<group>"; };
+		DC96AC7204B40D4621858F70 /* APCellDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APCellDatePicker.h; sourceTree = "<group>"; };
+		E11446315D1D03E29E5F31EF /* NSArray+APUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APUtil.m"; sourceTree = "<group>"; };
+		E55C1006F00BCD2C075F6C7E /* NSSet+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSSet+APUtil.h"; sourceTree = "<group>"; };
+		E755767C7E31C6600FC67023 /* NSLayoutConstraint+APUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+APUtil.h"; sourceTree = "<group>"; };
+		F7BFE78FE0C34C951F8AC19B /* Pods-APCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APCell-prefix.pch"; sourceTree = "<group>"; };
+		FD53D6D569242F7E7113F8B9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3127C90007B7A3CEBEE9658E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4592506974A419BA7911F85E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB94E59557CF6F4BAD1BE19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44637E46B81D5B0E30E049C2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01059D151AA0B4DE20B2CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F1A4E294E30AB80A126455 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03CE7979C51ADC1FEFB0C87D /* APUtil */ = {
+			isa = PBXGroup;
+			children = (
+				5AC47C8019324ACEBFC5F3E7 /* APUtil */,
+				3D37B840A09B1D8DDDA0F014 /* Support Files */,
+			);
+			name = APUtil;
+			path = ../../../APUtil;
+			sourceTree = "<group>";
+		};
+		0FDCEEAED628980DCC902330 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CC28428E17F6B746541CADE /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		37F7B6C7D9880CDF5CE828C2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C1D9E927E74D56E236CE85A /* APCell */,
+				03CE7979C51ADC1FEFB0C87D /* APUtil */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3D37B840A09B1D8DDDA0F014 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58C8670C16ECBB6B08B123F8 /* Pods-APUtil.xcconfig */,
+				CFE52BC2462E9BB49E5FB026 /* Pods-APUtil-Private.xcconfig */,
+				737E3451025E499EA592FAF6 /* Pods-APUtil-dummy.m */,
+				981C279064707D2C70FCB4E3 /* Pods-APUtil-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../APCell/APCellDemo/Pods/Target Support Files/Pods-APUtil";
+			sourceTree = "<group>";
+		};
+		5AC47C8019324ACEBFC5F3E7 /* APUtil */ = {
+			isa = PBXGroup;
+			children = (
+				75772C1DDF8FE1AC4E4F559E /* APUtil.h */,
+				ADE93AE94B1104D65CA067EA /* NSArray+APUtil.h */,
+				E11446315D1D03E29E5F31EF /* NSArray+APUtil.m */,
+				C6AD3D2A49E4221572066FA8 /* NSAttributedString+APUtil.h */,
+				347B31086A4344761D03B32E /* NSAttributedString+APUtil.m */,
+				78193D73A1E2A5BB5346DE75 /* NSData+APUtil.h */,
+				A2120B5908FF72304A6037DB /* NSData+APUtil.m */,
+				C4B4CE1DD74ABE7605572894 /* NSDate+APUtil.h */,
+				3834F7EC96580683DC262F30 /* NSDate+APUtil.m */,
+				A4CA73A3A1DF99BC0BA0436F /* NSError+APUtil.h */,
+				226D98F564BCE8B8B9A935DF /* NSError+APUtil.m */,
+				535DA6A3436ADAB9D853CF5F /* NSFetchRequest+APUtil.h */,
+				0EBE868EF7EE49E8DBE6E0D1 /* NSFetchRequest+APUtil.m */,
+				71C91E8D68DDD5C87F82FDAD /* NSJSONSerialization+APUtil.h */,
+				A849D62F559218D13843C555 /* NSJSONSerialization+APUtil.m */,
+				E755767C7E31C6600FC67023 /* NSLayoutConstraint+APUtil.h */,
+				364EA6C6758FC2586F879F71 /* NSLayoutConstraint+APUtil.m */,
+				739D3E6D8B0C7B9E3AED477E /* NSManagedObject+APUtil.h */,
+				AAA15BB724E9DD6A85D3AC07 /* NSManagedObject+APUtil.m */,
+				15B49E320222084B05A91699 /* NSManagedObjectContext+APUtil.h */,
+				5ACB847E5DFAA691573FFAD8 /* NSManagedObjectContext+APUtil.m */,
+				C0EDD15877FC24C65CD7EB53 /* NSMassFormatter+APUtil.h */,
+				1BCC17035E97EBFA24DA5CEE /* NSMassFormatter+APUtil.m */,
+				C9305649FC9244756EE2E257 /* NSNumber+APUtil.h */,
+				48A50F283436A7BD636CFEC8 /* NSNumber+APUtil.m */,
+				3353467060FC2273C0A84D0C /* NSPersistentStoreCoordinator+APUtil.h */,
+				1D92BB8D1DD3EC798BA1F671 /* NSPersistentStoreCoordinator+APUtil.m */,
+				E55C1006F00BCD2C075F6C7E /* NSSet+APUtil.h */,
+				D173AD4EB0DEE530FAC26EDB /* NSSet+APUtil.m */,
+				2A8716A12AE7F8052B121B8D /* NSString+APUtil.h */,
+				4713BC629CF50A754195E6DA /* NSString+APUtil.m */,
+				1ABD5D10D100D1F1CB182CBE /* UIAlertController+APUtil.h */,
+				9B4289247AC437E8EBF658B5 /* UIAlertController+APUtil.m */,
+				9873EA9DE52E998C87CCAFB9 /* UIColor+APUtil.h */,
+				733E6431C97CA0C51BECE7B1 /* UIColor+APUtil.m */,
+				6A5188CF0B83D4EC8173377B /* UIImage+APUtil.h */,
+				CCC940858FB719BFC69EC506 /* UIImage+APUtil.m */,
+				3B4C41FF726795FC697CC12F /* UIImage+resize.h */,
+				C4E59B3FEBB8EE16EE6043CA /* UIImage+resize.m */,
+				96F0B4767AB889B9998E8634 /* UIImageView+APUtil.h */,
+				83CA8EDEAC2AC78BDA64304E /* UIImageView+APUtil.m */,
+				B38638C3A17236E6F382258A /* UITableView+APUtil.h */,
+				A7D28741E5D4D26CA12CA52B /* UITableView+APUtil.m */,
+				43401153B5B357D1B4AF92DC /* UIView+APUtil.h */,
+				1347CAAFE38FA4C36C3C9164 /* UIView+APUtil.m */,
+				338AF4D6124ECFBF9262C919 /* UIViewController+APUtil.h */,
+				9D73D7B908118FCA5D719410 /* UIViewController+APUtil.m */,
+			);
+			path = APUtil;
+			sourceTree = "<group>";
+		};
+		73375DD0FA1ABB8577E7844B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				37A1DFB080AB7BB1E354CF88 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7C1D9E927E74D56E236CE85A /* APCell */ = {
+			isa = PBXGroup;
+			children = (
+				A9E8E17878C873716E1FAC79 /* APCell */,
+				FA74F040FF97F5388E23CB8D /* Support Files */,
+			);
+			name = APCell;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7CC28428E17F6B746541CADE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E06039BB4E253344AFBF99D /* Pods-acknowledgements.markdown */,
+				524965328B681018EE3D747B /* Pods-acknowledgements.plist */,
+				45F16A204D49E0979D545103 /* Pods-dummy.m */,
+				8E8B44C8B8D2EF97E8FF61BD /* Pods-environment.h */,
+				2EE2455E68E78E9ECC92BAC3 /* Pods-resources.sh */,
+				57FF1FE4C2DCDD23B69838A9 /* Pods.debug.xcconfig */,
+				FD53D6D569242F7E7113F8B9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		878BA68FCB584160CBEAED6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA321B944DE6FDDBC82DDCAD /* libPods.a */,
+				CC075B98DABAF8C6689AFF02 /* libPods-APCell.a */,
+				B43CB4D5C439A96B27F35744 /* libPods-APUtil.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B39B2B832671162DF9BAEA9 = {
+			isa = PBXGroup;
+			children = (
+				2D09352736115F0D8277B154 /* Podfile */,
+				37F7B6C7D9880CDF5CE828C2 /* Development Pods */,
+				D5332C6867D0CC31DFC406AE /* Frameworks */,
+				878BA68FCB584160CBEAED6C /* Products */,
+				0FDCEEAED628980DCC902330 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A9E8E17878C873716E1FAC79 /* APCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E54AA2855675DA17D5F9C69 /* APCell.h */,
+				286A0B67B1BF86CED8534A27 /* APCellButton.h */,
+				D20EFAA5660FE7D8599EA8EE /* APCellButton.m */,
+				DC96AC7204B40D4621858F70 /* APCellDatePicker.h */,
+				5484D522FF75488F47E271BD /* APCellDatePicker.m */,
+				35F9619391634EBF281D872C /* APCellSwitch.h */,
+				913D6317B6764CE28A86DBA0 /* APCellSwitch.m */,
+				CD8EC090586C51596F70F1C6 /* APCellTextField.h */,
+				1C4C93818D8BC97A0BCC653E /* APCellTextField.m */,
+				2081EEC60183B66A1B843BC0 /* APCellVolumePicker.h */,
+				89E3F86255116BE6D3C6A0A0 /* APCellVolumePicker.m */,
+				74A5B6A9EFE5E8C89C8F149A /* DynamicSubtitleCell.h */,
+				6C28D8FF2932B75D2D3CB53D /* DynamicSubtitleCell.m */,
+			);
+			path = APCell;
+			sourceTree = "<group>";
+		};
+		D5332C6867D0CC31DFC406AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73375DD0FA1ABB8577E7844B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA74F040FF97F5388E23CB8D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19383ED9696AFEA005E2F949 /* Pods-APCell.xcconfig */,
+				5DE049A80DB686F9B9E2D0C5 /* Pods-APCell-Private.xcconfig */,
+				ABB58E9C111A735861D3C77F /* Pods-APCell-dummy.m */,
+				F7BFE78FE0C34C951F8AC19B /* Pods-APCell-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "APCellDemo/Pods/Target Support Files/Pods-APCell";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70EC699AC04D620326A1F7AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B77ABEDCA9EFF0C2AD67503 /* APUtil.h in Headers */,
+				0ECBF251DECEAF82D4BDF4D4 /* NSArray+APUtil.h in Headers */,
+				DEC197C1F31AAE73563EABA1 /* NSAttributedString+APUtil.h in Headers */,
+				8247E92253067F9B1060DD0C /* NSData+APUtil.h in Headers */,
+				C71BF893020A7DFFE5286C56 /* NSDate+APUtil.h in Headers */,
+				0A5C001FC76C37D939274C9C /* NSError+APUtil.h in Headers */,
+				ABB23E75AC248FE140D9E00E /* NSFetchRequest+APUtil.h in Headers */,
+				6303A28AA2660C6FDDEF24DB /* NSJSONSerialization+APUtil.h in Headers */,
+				9741EA701F2EE115B3AEAD7B /* NSLayoutConstraint+APUtil.h in Headers */,
+				B672E46D211883BC6464E86F /* NSManagedObject+APUtil.h in Headers */,
+				5FE710151A8095EEC25CC97D /* NSManagedObjectContext+APUtil.h in Headers */,
+				BD3B762B90C3D1A5B579BD23 /* NSMassFormatter+APUtil.h in Headers */,
+				5CE7B75EF6207219962224FB /* NSNumber+APUtil.h in Headers */,
+				9FEF0047DC18405251DA5666 /* NSPersistentStoreCoordinator+APUtil.h in Headers */,
+				BE5AF957848EC16F3057B999 /* NSSet+APUtil.h in Headers */,
+				F024CDDE1E2A6D37EEF7B679 /* NSString+APUtil.h in Headers */,
+				A71777297C8A5CD8F9737A1A /* UIAlertController+APUtil.h in Headers */,
+				9CF4BB6ADF2463923B57E107 /* UIColor+APUtil.h in Headers */,
+				6FC0BD5562FE1802418AE95C /* UIImage+APUtil.h in Headers */,
+				2E9A19018BB9063DAD56653F /* UIImage+resize.h in Headers */,
+				F68586F7642969C0F10D5D72 /* UIImageView+APUtil.h in Headers */,
+				5554461EAA86E15910BB350A /* UITableView+APUtil.h in Headers */,
+				B429D1A12ECA8A460EA250F1 /* UIView+APUtil.h in Headers */,
+				55AD92DC171BB1B080168315 /* UIViewController+APUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC077183FA2634F00BE381FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC89434A0798E6B45DC1293 /* APCell.h in Headers */,
+				D4766D0951CF41B32866E3E2 /* APCellButton.h in Headers */,
+				2E4D25A199677F2000767AF2 /* APCellDatePicker.h in Headers */,
+				9E58A6E38F6E7F351E607743 /* APCellSwitch.h in Headers */,
+				EE7949F1D0107C4870E2FE92 /* APCellTextField.h in Headers */,
+				0ABF840C21D745EA89C1080D /* APCellVolumePicker.h in Headers */,
+				7A0F88C22304E4A6B60DE46F /* DynamicSubtitleCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		500907B6DC46A3C9A768A05C /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70EE1C7DDC54A831DBED43A5 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				05E93AF7D3F9DEC127185D1B /* Sources */,
+				C01059D151AA0B4DE20B2CBD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF444FD9CC8D84625552B648 /* PBXTargetDependency */,
+				CAFC5C27F3C81872B9403293 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = BA321B944DE6FDDBC82DDCAD /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		53BC91B72FA4D88FEA705931 /* Pods-APUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DD989D9646A95B1A447A6B9 /* Build configuration list for PBXNativeTarget "Pods-APUtil" */;
+			buildPhases = (
+				92CF39BD6BEDE7EB544DEB2C /* Sources */,
+				3DB94E59557CF6F4BAD1BE19 /* Frameworks */,
+				70EC699AC04D620326A1F7AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-APUtil";
+			productName = "Pods-APUtil";
+			productReference = B43CB4D5C439A96B27F35744 /* libPods-APUtil.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		679C53C771B4D4917A343FC8 /* Pods-APCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7CA9F1096A8F2EE7D42D717 /* Build configuration list for PBXNativeTarget "Pods-APCell" */;
+			buildPhases = (
+				20F038C2A8BDD595B08CC48F /* Sources */,
+				3127C90007B7A3CEBEE9658E /* Frameworks */,
+				FC077183FA2634F00BE381FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-APCell";
+			productName = "Pods-APCell";
+			productReference = CC075B98DABAF8C6689AFF02 /* libPods-APCell.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A750E36788C0214A8B46CAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 5FB6DE49AC145248D60E37C2 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9B39B2B832671162DF9BAEA9;
+			productRefGroup = 878BA68FCB584160CBEAED6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				500907B6DC46A3C9A768A05C /* Pods */,
+				679C53C771B4D4917A343FC8 /* Pods-APCell */,
+				53BC91B72FA4D88FEA705931 /* Pods-APUtil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05E93AF7D3F9DEC127185D1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3188E23059BEDB575AC0FAB /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F038C2A8BDD595B08CC48F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C647A0CDEE9147C776D3CECC /* APCellButton.m in Sources */,
+				4B4A1A318CA34154A389BF29 /* APCellDatePicker.m in Sources */,
+				2ED1938EA5580C07C73EE315 /* APCellSwitch.m in Sources */,
+				53D84F1A760CF373DAFE8EF7 /* APCellTextField.m in Sources */,
+				3AC5E69AF5060A5094D1DB98 /* APCellVolumePicker.m in Sources */,
+				5AD551521A8BE0C2D426B87C /* DynamicSubtitleCell.m in Sources */,
+				20F8D3B033055524F1FD0E69 /* Pods-APCell-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92CF39BD6BEDE7EB544DEB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D8AB415EEE57C399F56C4 /* NSArray+APUtil.m in Sources */,
+				33F764E5E25FC3D8FDDE455B /* NSAttributedString+APUtil.m in Sources */,
+				7BD683D073ECDCFB132C4C68 /* NSData+APUtil.m in Sources */,
+				F84CCF96F425ABA9C1FB000F /* NSDate+APUtil.m in Sources */,
+				089ABBC60C1AB0AAB09F917C /* NSError+APUtil.m in Sources */,
+				E4529E8E5C2D3CAB99B665AF /* NSFetchRequest+APUtil.m in Sources */,
+				6EBFFE019D7D07D3BC5721CF /* NSJSONSerialization+APUtil.m in Sources */,
+				0FA7D61A1BDF3949076503DB /* NSLayoutConstraint+APUtil.m in Sources */,
+				B359C13227592F34CEF946D2 /* NSManagedObject+APUtil.m in Sources */,
+				0160F3D6A47D019409E1EB88 /* NSManagedObjectContext+APUtil.m in Sources */,
+				3B4621CC95031806171DEFB3 /* NSMassFormatter+APUtil.m in Sources */,
+				BE4AEE5AF478E1ECE61CA6FA /* NSNumber+APUtil.m in Sources */,
+				E876F1E29B6B561760B046AE /* NSPersistentStoreCoordinator+APUtil.m in Sources */,
+				F211E9FA8EABF6328E6464F4 /* NSSet+APUtil.m in Sources */,
+				50E09C2E0D65FF3569C4BBCD /* NSString+APUtil.m in Sources */,
+				0A656CC61FD38F4BAD3B0F0F /* Pods-APUtil-dummy.m in Sources */,
+				A371032F76D63D3ADF41D443 /* UIAlertController+APUtil.m in Sources */,
+				0FC5157E1751F13A253AD2FA /* UIColor+APUtil.m in Sources */,
+				7F4FC0B5F880164B535741ED /* UIImage+APUtil.m in Sources */,
+				B584C06422989FB6BECCB2F8 /* UIImage+resize.m in Sources */,
+				DB04C72D5C8FD8B37977DE2C /* UIImageView+APUtil.m in Sources */,
+				D45FF861076D535F2D18408F /* UITableView+APUtil.m in Sources */,
+				630C77F781699155DDCE9140 /* UIView+APUtil.m in Sources */,
+				CF275E7B61856AE9949F52F6 /* UIViewController+APUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAFC5C27F3C81872B9403293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-APUtil";
+			target = 53BC91B72FA4D88FEA705931 /* Pods-APUtil */;
+			targetProxy = 83C99AD83632CF375DBA6BE5 /* PBXContainerItemProxy */;
+		};
+		CF444FD9CC8D84625552B648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-APCell";
+			target = 679C53C771B4D4917A343FC8 /* Pods-APCell */;
+			targetProxy = 4CDA959285B8C7D0F71AB035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2AF6FA9DD7E557EA943E19BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE52BC2462E9BB49E5FB026 /* Pods-APUtil-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APUtil/Pods-APUtil-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		671B135CE97E365C602BE23E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AB8B451DCB0097E01E9DAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE049A80DB686F9B9E2D0C5 /* Pods-APCell-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APCell/Pods-APCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8E9C18EB06F2F0AAB655BF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9510EB25AF31B1C20C92284A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD53D6D569242F7E7113F8B9 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B2A6490B03AC5D2224D2D8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE049A80DB686F9B9E2D0C5 /* Pods-APCell-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APCell/Pods-APCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C9F07D7995E74F5A58C37F22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE52BC2462E9BB49E5FB026 /* Pods-APUtil-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-APUtil/Pods-APUtil-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D07446830AD71F16D7B89708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57FF1FE4C2DCDD23B69838A9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DD989D9646A95B1A447A6B9 /* Build configuration list for PBXNativeTarget "Pods-APUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF6FA9DD7E557EA943E19BC /* Debug */,
+				C9F07D7995E74F5A58C37F22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB6DE49AC145248D60E37C2 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E9C18EB06F2F0AAB655BF3E /* Debug */,
+				671B135CE97E365C602BE23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70EE1C7DDC54A831DBED43A5 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07446830AD71F16D7B89708 /* Debug */,
+				9510EB25AF31B1C20C92284A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7CA9F1096A8F2EE7D42D717 /* Build configuration list for PBXNativeTarget "Pods-APCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A6490B03AC5D2224D2D8F9 /* Debug */,
+				6AB8B451DCB0097E01E9DAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A750E36788C0214A8B46CAA /* Project object */;
+}

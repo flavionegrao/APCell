@@ -1,0 +1,19 @@
+PODS:
+  - APCell (0.1)
+  - APUtil (0.3)
+
+DEPENDENCIES:
+  - APCell (from `../../APCell/`)
+  - APUtil (from `../../APUtil/`)
+
+EXTERNAL SOURCES:
+  APCell:
+    :path: ../../APCell/
+  APUtil:
+    :path: ../../APUtil/
+
+SPEC CHECKSUMS:
+  APCell: a94792ff21fef2521e66a745ad3916c1f7534004
+  APUtil: 401355fedf415404e32869f7acd400802e1f4570
+
+COCOAPODS: 0.37.2

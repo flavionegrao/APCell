@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB683262CAAF2FCACB7E94B93FA7B4543EECFA11",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EB683262CAAF2FCACB7E94B93FA7B4543EECFA11" : 0,
+    "5AC4FDCE9AE2DBB985C147F65BF35462BA132661" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1188CDBC-1516-4CE1-BA3D-6702283CFD91",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EB683262CAAF2FCACB7E94B93FA7B4543EECFA11" : "APCell\/",
+    "5AC4FDCE9AE2DBB985C147F65BF35462BA132661" : "APUtil\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "APCellDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "APCellDemo\/APCellDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:flavionegrao\/APUtil.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5AC4FDCE9AE2DBB985C147F65BF35462BA132661"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:flavionegrao\/APCell.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB683262CAAF2FCACB7E94B93FA7B4543EECFA11"
+    }
+  ]
+}

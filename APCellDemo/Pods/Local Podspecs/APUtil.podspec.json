@@ -1,0 +1,19 @@
+{
+  "name": "APUtil",
+  "version": "0.3",
+  "summary": "Categories utilities for Cocoa Classes",
+  "homepage": "https://github.com/flavionegrao/APUtil",
+  "license": "MIT",
+  "authors": {
+    "Flavio Negrao Torres": "flavio@apetis.com"
+  },
+  "source": {
+    "git": "https://github.com/flavionegrao/APUtil.git",
+    "tag": "0.3"
+  },
+  "source_files": "APUtil/**",
+  "platforms": {
+    "ios": "7.1"
+  },
+  "requires_arc": true
+}
