@@ -60,7 +60,7 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     _autocapitalizationType = UITextAutocapitalizationTypeNone;
     _textAlignment = NSTextAlignmentLeft;
     _textfieldInputType = APStringInputTypeFreeText;
-    _textColor = [UIColor grayColor];
+    _textColor = [UIColor blackColor];
     //_clearButtonMode = UITextFieldViewModeNever;
     
     NSNumberFormatter *formatter = [NSNumber sharedFormatter];

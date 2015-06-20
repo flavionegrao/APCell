@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
 /// Text editado pelo usuário
 @property (nonatomic,copy) NSString* text;
 
-/// Default is graycolor
+/// Default is black color
 @property (nonatomic,strong) UIColor* textColor;
 
 /// Textfield text alignment, default is NSTextAlignmentLeft
