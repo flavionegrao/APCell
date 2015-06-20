@@ -18,17 +18,15 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 @interface APCellTextField () <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,copy) void (^cellDidEdit) (NSString* text);
 @property (nonatomic,copy) void (^didBecomeFirstResponder)(void);
+@property (nonatomic,copy) void (^cellDidClickReturn) (void);
 
 @property (nonatomic,strong) UITextField* textField;
 @property (nonatomic,strong) NSArray* textFielHorizontalContraints;
 @property (nonatomic,strong) NSString* decimalSeparator;
 
-@property (nonatomic,weak) UILabel* prefixTextLabel;
-
 @end
 
 @implementation APCellTextField
-
 
 // via tableview:dequeuecell
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -63,13 +61,14 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     _textAlignment = NSTextAlignmentLeft;
     _textfieldInputType = APStringInputTypeFreeText;
     _textColor = [UIColor grayColor];
+    //_clearButtonMode = UITextFieldViewModeNever;
     
     NSNumberFormatter *formatter = [NSNumber sharedFormatter];
     self.decimalSeparator = formatter.decimalSeparator;
     
     [self.contentView addSubview:self.textField];
     
-    _textInsetFromLeftMargin = 100;
+    //_textInsetFromLeftMargin = 100;
     
     // Minimum height
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:43.5]];
@@ -114,46 +113,78 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 }
 
 
+//- (void) setPrefixText:(NSString *)prefixText {
+//    if (prefixText) {
+//        
+//        UILabel* prefixTextLabel = [UILabel new];
+//        prefixTextLabel.numberOfLines = 0;
+//        prefixTextLabel.textColor = self.prefixTextColor ?: [UIColor blackColor];
+//        prefixTextLabel.text = prefixText;
+//        [prefixTextLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+//        [prefixTextLabel setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
+//        [self.contentView addSubview:prefixTextLabel];
+//        self.prefixTextLabel = prefixTextLabel;
+//        
+//        [self.contentView removeConstraints:self.textFielHorizontalContraints];
+//        
+//        NSDictionary* viewsDict = @{@"headerLabel":prefixTextLabel,
+//                                    @"textField":self.textField};
+//        
+//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerLabel]|"
+//                                                                                 options:0
+//                                                                                 metrics:nil
+//                                                                                   views:viewsDict]];
+//        
+//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-inset-[headerLabel]"
+//                                                                                 options:0
+//                                                                                 metrics:@{@"inset":@(15)}
+//                                                                                   views:viewsDict]];
+//        
+//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-leftSpaceInset-[textField]-inset-|"
+//                                                                                 options:0
+//                                                                                 metrics:@{@"inset":@(kAPTextFieldHorizontalInset),
+//                                                                                           @"leftSpaceInset":@(self.textInsetFromLeftMargin)}
+//                                                                                   views:viewsDict]];
+//    }
+//    _prefixText = prefixText;
+//}
+
 - (void) setPrefixText:(NSString *)prefixText {
-    if (prefixText) {
-        
-        UILabel* prefixTextLabel = [UILabel new];
-        prefixTextLabel.numberOfLines = 0;
-        prefixTextLabel.textColor = self.prefixTextColor ?: [UIColor blackColor];
-        prefixTextLabel.text = prefixText;
-        [prefixTextLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [prefixTextLabel setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
-        [self.contentView addSubview:prefixTextLabel];
-        self.prefixTextLabel = prefixTextLabel;
-        
-        [self.contentView removeConstraints:self.textFielHorizontalContraints];
-        
-        NSDictionary* viewsDict = @{@"headerLabel":prefixTextLabel,
-                                    @"textField":self.textField};
-        
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerLabel]|"
-                                                                                 options:0
-                                                                                 metrics:nil
-                                                                                   views:viewsDict]];
-        
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-inset-[headerLabel]"
-                                                                                 options:0
-                                                                                 metrics:@{@"inset":@(15)}
-                                                                                   views:viewsDict]];
-        
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-leftSpaceInset-[textField]-inset-|"
-                                                                                 options:0
-                                                                                 metrics:@{@"inset":@(kAPTextFieldHorizontalInset),
-                                                                                           @"leftSpaceInset":@(self.textInsetFromLeftMargin)}
-                                                                                   views:viewsDict]];
-    }
     _prefixText = prefixText;
+    UILabel* prefixTextLabel = [UILabel new];
+    prefixTextLabel.textColor = self.textField.textColor;
+    prefixTextLabel.font = self.textField.font;
+    prefixTextLabel.text = prefixText;
+    prefixTextLabel.textColor = self.prefixTextColor;
+    prefixTextLabel.textAlignment = NSTextAlignmentLeft;
+    [prefixTextLabel sizeToFit];
+    self.textField.leftView = prefixTextLabel;
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
 }
 
-- (void) setPrefixTextColor:(UIColor *)prefixTextColor {
-    self.prefixTextLabel.textColor = prefixTextColor;
-    _prefixTextColor = prefixTextColor;
+- (void) setPrefixTextMiniumWidth:(CGFloat)prefixTextMiniumWidth {
+    _prefixTextMiniumWidth = prefixTextMiniumWidth;
+    CGRect frame = self.textField.leftView.frame;
+    frame.size.width = 150;
+    self.textField.leftView.frame = frame;
 }
+
+
+- (void) setSufixText:(NSString *)sufixText {
+    _sufixText = sufixText;
+    UILabel* prefixTextLabel = [UILabel new];
+    prefixTextLabel.textColor = self.textField.textColor;
+    prefixTextLabel.font = self.textField.font;
+    prefixTextLabel.text = sufixText;
+    [prefixTextLabel sizeToFit];
+    self.textField.rightView = prefixTextLabel;
+    self.textField.rightViewMode = UITextFieldViewModeAlways;
+}
+
+//- (void) setPrefixTextColor:(UIColor *)prefixTextColor {
+//    self.prefixTextLabel.textColor = prefixTextColor;
+//    _prefixTextColor = prefixTextColor;
+//}
 
 - (void) setText:(NSString *)text {
     _text = text;
@@ -235,8 +266,6 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
         default:
             self.textField.inputAccessoryView = nil;
     }
-
-    
 }
 
 - (UIToolbar*) pickerAccessoryView {
@@ -244,7 +273,7 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     numberToolbar.barStyle = UIBarStyleDefault;
     numberToolbar.items = @[[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                            
-                           [[UIBarButtonItem alloc]initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)]];
+    [[UIBarButtonItem alloc]initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)]];
     [numberToolbar sizeToFit];
     return numberToolbar;
 }
@@ -326,17 +355,17 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 }
 
 
-//- (BOOL) becomeFirstResponder {
-//    [super becomeFirstResponder];
-//    [self.textField becomeFirstResponder];
-//    return YES;
-//}
-//
-//- (BOOL) resignFirstResponder {
-//    [super resignFirstResponder];
-//    [self.textField resignFirstResponder];
-//    return YES;
-//}
+- (BOOL) becomeFirstResponder {
+    [super becomeFirstResponder];
+    [self.textField becomeFirstResponder];
+    return YES;
+}
+
+- (BOOL) resignFirstResponder {
+    [super resignFirstResponder];
+    [self.textField resignFirstResponder];
+    return YES;
+}
 
 #pragma UITextFieldDelegate
 
