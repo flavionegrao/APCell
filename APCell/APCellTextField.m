@@ -252,8 +252,8 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 
 - (void) setCellDidClickReturn:(void (^)(void))cellDidClickReturn {
     _cellDidClickReturn = cellDidClickReturn;
+    
     switch (self.textfieldInputType) {
-            
         case APStringInputTypeMoney:
         case APStringInputTypeNumberDecimal:
         case APStringInputTypeNumber:
@@ -408,7 +408,14 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     
     if (self.cellDidEdit) {
         // Executa block com o valor atual do textField
-        self.cellDidEdit([textField.text stringByReplacingCharactersInRange:range withString:string]);
+        NSString* editedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        
+        // Se string for vazia, retorna nil
+        if ([editedString length] == 0) {
+            editedString = nil;
+        }
+        
+        self.cellDidEdit(editedString);
     }
     
     return YES;
