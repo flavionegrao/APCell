@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *subheadLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *customImageView;
 
+// Default is 44
+@property (nonatomic, assign) CGFloat minimumHeight;
+
 @end
