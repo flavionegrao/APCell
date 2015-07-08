@@ -17,7 +17,7 @@
 
 - (NSLayoutConstraint*) heightConstraint {
     if (!_heightConstraint) {
-        _heightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:self.minimumHeight];
+        _heightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:self.minimumHeight];
     }
     return _heightConstraint;
 }
