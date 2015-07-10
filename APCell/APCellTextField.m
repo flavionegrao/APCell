@@ -105,6 +105,8 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
         _textField = [UITextField new];
         _textField.delegate = self;
         _textField.borderStyle = UITextBorderStyleNone;
+        _textField.autocorrectionType = self.autoCorrectionType;
+        _textField.autocapitalizationType = self.autocapitalizationType;
         _textField.textAlignment = self.textAlignment;
         _textField.textColor = self.textColor;
         [_textField setTranslatesAutoresizingMaskIntoConstraints:NO];
