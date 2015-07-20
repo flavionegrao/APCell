@@ -43,6 +43,12 @@ typedef NS_ENUM(NSInteger, APStringInputType) {
 /// Default is 0, if textfieldInputType == APStringInputTypeMoney or APStringInputTypeNumberDecimal then it will 2
 @property (nonatomic,assign) NSUInteger maxDecimalPlaces;
 
+/// The maximum numbers of characters accepted for the text property. Default is unlimited
+@property (nonatomic,assign) NSUInteger maxTextLenght;
+
+/// The maximum value accepted for the text property. This applies only for APStringInputTypeNumber,APStringInputTypeNumberDecimal,APStringInputTypeMoney.  Default is unlimited
+@property (nonatomic,strong) NSNumber* maxTextValue;
+
 /// Text editado pelo usuário
 @property (nonatomic,copy) NSString* text;
 

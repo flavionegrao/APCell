@@ -61,6 +61,8 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     _textAlignment = NSTextAlignmentLeft;
     _textfieldInputType = APStringInputTypeFreeText;
     _textColor = [UIColor blackColor];
+    _maxDecimalPlaces = NSIntegerMax;
+    _maxTextValue = @(NSIntegerMax);
     //_clearButtonMode = UITextFieldViewModeNever;
     
     NSNumberFormatter *formatter = [NSNumber sharedFormatter];
@@ -113,43 +115,6 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     }
     return _textField;
 }
-
-
-//- (void) setPrefixText:(NSString *)prefixText {
-//    if (prefixText) {
-//        
-//        UILabel* prefixTextLabel = [UILabel new];
-//        prefixTextLabel.numberOfLines = 0;
-//        prefixTextLabel.textColor = self.prefixTextColor ?: [UIColor blackColor];
-//        prefixTextLabel.text = prefixText;
-//        [prefixTextLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-//        [prefixTextLabel setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
-//        [self.contentView addSubview:prefixTextLabel];
-//        self.prefixTextLabel = prefixTextLabel;
-//        
-//        [self.contentView removeConstraints:self.textFielHorizontalContraints];
-//        
-//        NSDictionary* viewsDict = @{@"headerLabel":prefixTextLabel,
-//                                    @"textField":self.textField};
-//        
-//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerLabel]|"
-//                                                                                 options:0
-//                                                                                 metrics:nil
-//                                                                                   views:viewsDict]];
-//        
-//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-inset-[headerLabel]"
-//                                                                                 options:0
-//                                                                                 metrics:@{@"inset":@(15)}
-//                                                                                   views:viewsDict]];
-//        
-//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-leftSpaceInset-[textField]-inset-|"
-//                                                                                 options:0
-//                                                                                 metrics:@{@"inset":@(kAPTextFieldHorizontalInset),
-//                                                                                           @"leftSpaceInset":@(self.textInsetFromLeftMargin)}
-//                                                                                   views:viewsDict]];
-//    }
-//    _prefixText = prefixText;
-//}
 
 - (void) setPrefixText:(NSString *)prefixText {
     _prefixText = prefixText;
@@ -372,6 +337,28 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
 #pragma UITextFieldDelegate
 
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    // Max Values
+    NSString* editedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    switch (self.textfieldInputType) {
+        case APStringInputTypeMoney:
+        case APStringInputTypeNumber:
+        case APStringInputTypeNumberDecimal: {
+            if ([editedString floatValue] > [self.maxTextValue floatValue]) {
+                return NO;
+            }
+            break;
+        }
+        case APStringInputTypeFreeText: {
+            if (editedString.length > self.maxTextLenght) {
+                return NO;
+            }
+            break;
+        }
+            
+        default: break;
+    }
+            
     
     // Validar o que foi digitado
     if (string.length > 0) {
