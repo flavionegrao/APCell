@@ -63,6 +63,7 @@ static NSInteger const kAPTextFieldHorizontalInset = 20;
     _textColor = [UIColor blackColor];
     _maxDecimalPlaces = NSIntegerMax;
     _maxTextValue = @(NSIntegerMax);
+    _maxTextLenght = NSIntegerMax;
     //_clearButtonMode = UITextFieldViewModeNever;
     
     NSNumberFormatter *formatter = [NSNumber sharedFormatter];
