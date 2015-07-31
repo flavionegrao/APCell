@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "APCell"
-  s.version          = "0.1"
+  s.version          = "0.2"
   s.summary          = "Subclasses of UITableViewCells"
   s.homepage         = "https://github.com/flavionegrao/APCell"
   s.license          = 'MIT'
